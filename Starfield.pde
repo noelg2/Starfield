@@ -1,4 +1,4 @@
-Particle[] parts = new Particle[500];
+Particle[] parts = new Particle[1111];
 boolean start = false;
 void setup(){
   size(500,500);
@@ -30,7 +30,7 @@ class Particle{
   }
   void show(){
     fill(myColor);
-    ellipse((float)myX, (float)myY, 8,8);
+    ellipse((float)myX, (float)myY, 2,2);
   }
   void drift(){
    myX = myX + (Math.cos(myAngle)*mySpeed);
@@ -45,18 +45,7 @@ class OddballParticle extends Particle{
   }
   void show(){
     fill(myColor);
-    ellipse((float)myX, (float)myY, 10,10);
+    ellipse((float)myX, (float)myY, 5,5);
   }
-  void drift(){
-  if (mouseX>myX){
-   myX = myX+(int)(Math.random()*7)-2;
-} else{
-  myX = myX+(int)(Math.random()*7)-4;
-}
-  if (mouseY>myY){
-   myY = myY+(int)(Math.random()*7)-2;
-} else{
-  myY = myY+(int)(Math.random()*7)-4;
-}
   }
-}
+
